@@ -1,0 +1,36 @@
+/usr/local/bin/ruby extconf.rb 
+extconf.rb:18:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
+checking for atan() in -lm... no
+checking for atan() in -lm... yes
+checking for inflate() in -lz... yes
+checking for xmlXPtrNewRange() in -lxml2... yes
+checking for libxml/xmlversion.h... no
+checking for libxml/xmlversion.h in /opt/include/libxml2,/usr/local/include/libxml2,/usr/include/libxml2... yes
+checking for xsltApplyStylesheet() in -lxslt... yes
+checking for xslt.h... no
+checking for xslt.h in /opt/include/libxslt,/usr/local/include/libxslt,/usr/include/libxslt... yes
+checking for exsltLibexsltVersion() in -lexslt... yes
+checking for exslt.h... no
+checking for exslt.h in /opt/include/libexslt,/usr/local/include/libexslt,/usr/include/libexslt... yes
+checking for libxml/ruby_libxml.h... yes
+checking for libxml/ruby_xml_document.h... yes
+creating extconf.h
+creating Makefile
+
+make
+gcc -I. -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -o libxslt.o -c libxslt.c
+In file included from libxslt.h:9,
+                 from libxslt.c:5:
+/usr/local/include/ruby-1.9.1/ruby/backward/rubyio.h:2: warning: #warning use "ruby/io.h" instead of "rubyio.h"
+gcc -I. -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -o ruby_xslt_stylesheet.o -c ruby_xslt_stylesheet.c
+In file included from libxslt.h:9,
+                 from ruby_xslt_stylesheet.c:5:
+/usr/local/include/ruby-1.9.1/ruby/backward/rubyio.h:2: warning: #warning use "ruby/io.h" instead of "rubyio.h"
+ruby_xslt_stylesheet.c: In function ‘ruby_xslt_coerce_params’:
+ruby_xslt_stylesheet.c:84: error: ‘struct RArray’ has no member named ‘len’
+ruby_xslt_stylesheet.c:88: error: ‘struct RArray’ has no member named ‘ptr’
+ruby_xslt_stylesheet.c:89: error: ‘struct RString’ has no member named ‘len’
+ruby_xslt_stylesheet.c:92: error: ‘struct RString’ has no member named ‘ptr’
+ruby_xslt_stylesheet.c: In function ‘ruby_xslt_stylesheet_apply’:
+ruby_xslt_stylesheet.c:157: error: ‘struct RArray’ has no member named ‘len’
+make: *** [ruby_xslt_stylesheet.o] Erreur 1
