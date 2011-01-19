@@ -1,6 +1,9 @@
 #ifndef EXTCONF_H
 #define EXTCONF_H
 #define HAVE_ZLIB_H 1
+#define HAVE_LIBXML_XMLVERSION_H 1
+#define HAVE_XSLT_H 1
+#define HAVE_EXSLT_H 1
 #define HAVE_LIBXML_RUBY_LIBXML_H 1
 #define HAVE_LIBXML_RUBY_XML_DOCUMENT_H 1
 #endif

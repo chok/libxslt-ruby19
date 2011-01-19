@@ -1,4 +1,5 @@
 /usr/local/bin/ruby extconf.rb 
+extconf.rb:131: warning: mismatched indentations at 'end' with 'unless' at 125
 extconf.rb:18:Warning: Gem::SourceIndex#search support for String patterns is deprecated, use #find_name
 checking for atan() in -lm... no
 checking for atan() in -lm... yes
@@ -14,23 +15,65 @@ checking for exslt.h... no
 checking for exslt.h in /opt/include/libexslt,/usr/local/include/libexslt,/usr/include/libexslt... yes
 checking for libxml/ruby_libxml.h... yes
 checking for libxml/ruby_xml_document.h... yes
-creating extconf.h
-creating Makefile
+checking for rxml_document_wrap() in -lxml_ruby... no
+checking for rxml_document_wrap() in -l:libxml_ruby.so... no
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of
+necessary libraries and/or headers.  Check the mkmf.log file for more
+details.  You may need configuration options.
 
-make
-gcc -I. -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -o libxslt.o -c libxslt.c
-In file included from libxslt.h:9,
-                 from libxslt.c:5:
-/usr/local/include/ruby-1.9.1/ruby/backward/rubyio.h:2: warning: #warning use "ruby/io.h" instead of "rubyio.h"
-gcc -I. -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt -DRUBY_EXTCONF_H=\"extconf.h\"    -fPIC -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long  -o ruby_xslt_stylesheet.o -c ruby_xslt_stylesheet.c
-In file included from libxslt.h:9,
-                 from ruby_xslt_stylesheet.c:5:
-/usr/local/include/ruby-1.9.1/ruby/backward/rubyio.h:2: warning: #warning use "ruby/io.h" instead of "rubyio.h"
-ruby_xslt_stylesheet.c: In function ‘ruby_xslt_coerce_params’:
-ruby_xslt_stylesheet.c:84: error: ‘struct RArray’ has no member named ‘len’
-ruby_xslt_stylesheet.c:88: error: ‘struct RArray’ has no member named ‘ptr’
-ruby_xslt_stylesheet.c:89: error: ‘struct RString’ has no member named ‘len’
-ruby_xslt_stylesheet.c:92: error: ‘struct RString’ has no member named ‘ptr’
-ruby_xslt_stylesheet.c: In function ‘ruby_xslt_stylesheet_apply’:
-ruby_xslt_stylesheet.c:157: error: ‘struct RArray’ has no member named ‘len’
-make: *** [ruby_xslt_stylesheet.o] Erreur 1
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/usr/local/bin/ruby
+	--with-xml2-dir
+	--without-xml2-dir
+	--with-xml2-include
+	--without-xml2-include=${xml2-dir}/include
+	--with-xml2-lib
+	--without-xml2-lib=${xml2-dir}/lib
+	--with-xslt-dir
+	--without-xslt-dir
+	--with-xslt-include
+	--without-xslt-include=${xslt-dir}/include
+	--with-xslt-lib
+	--without-xslt-lib=${xslt-dir}/lib
+	--with-exslt-dir
+	--without-exslt-dir
+	--with-exslt-include
+	--without-exslt-include=${exslt-dir}/include
+	--with-exslt-lib
+	--without-exslt-lib=${exslt-dir}/lib
+	--with-libxml-ruby-dir
+	--without-libxml-ruby-dir
+	--with-libxml-ruby-include
+	--without-libxml-ruby-include=${libxml-ruby-dir}/include
+	--with-libxml-ruby-lib
+	--without-libxml-ruby-lib=${libxml-ruby-dir}/lib
+	--with-mlib
+	--without-mlib
+	--with-mlib
+	--without-mlib
+	--with-zlib
+	--without-zlib
+	--with-xml2lib
+	--without-xml2lib
+	--with-xsltlib
+	--without-xsltlib
+	--with-exsltlib
+	--without-exsltlib
+	--with-xml_rubylib
+	--without-xml_rubylib
+	--with-:libxml_ruby.solib
+	--without-:libxml_ruby.solib
+ extconf failure: %s
+  need libxml-ruby
+        Install libxml-ruby first.

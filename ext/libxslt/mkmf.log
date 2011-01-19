@@ -369,3 +369,193 @@ checked program was:
 
 --------------------
 
+have_library: checking for rxml_document_wrap() in -lxml_ruby... -------------------- no
+
+"gcc -o conftest -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -Wl,-R/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2 -lz -lm  -Wl,-R -Wl,/usr/local/lib -L/usr/local/lib -lruby-static -lxml_ruby -lexslt -lxslt -lxml2 -lz -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘rxml_document_wrap’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rxml_document_wrap; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -Wl,-R/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2 -lz -lm  -Wl,-R -Wl,/usr/local/lib -L/usr/local/lib -lruby-static -lxml_ruby -lexslt -lxslt -lxml2 -lz -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_class_new_instance'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eTypeError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ivar_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_snprintf'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_iv_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_class_under'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_mEnumerable'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_aref'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_include_module'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_funcall'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_aset'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_check_string_type'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_attr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_method'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_fix2int'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cvar_get'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `st_foreach'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eRuntimeError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_cat2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_singleton_method'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_mKernel'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_string_value_ptr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_exc_raise'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_string_value_cstr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_block_given_p'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_block_proc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_intern2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cvar_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_fatal'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_scan_args'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_cat'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_new3'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_num2int'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_new_cstr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xmalloc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_warning'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_exc_new2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_obj_is_kind_of'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_alias'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_obj_as_string'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eStandardError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module_under'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module_function'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_warn'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_gc_mark'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_int2big'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_float_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_data_object_alloc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_alloc_func'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ivar_get'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_raise'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_respond_to'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_check_type'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xfree'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xmalloc2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_gc_unregister_address'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eArgError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_const'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_push'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cObject'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_yield'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_tbl'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rxml_document_wrap(); return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for rxml_document_wrap() in -l:libxml_ruby.so... -------------------- no
+
+"gcc -o conftest -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -Wl,-R/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2 -lz -lm  -Wl,-R -Wl,/usr/local/lib -L/usr/local/lib -lruby-static -l:libxml_ruby.so -lexslt -lxslt -lxml2 -lz -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+conftest.c: In function ‘t’:
+conftest.c:5: error: ‘rxml_document_wrap’ undeclared (first use in this function)
+conftest.c:5: error: (Each undeclared identifier is reported only once
+conftest.c:5: error: for each function it appears in.)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { void ((*volatile p)()); p = (void ((*)()))rxml_document_wrap; return 0; }
+/* end */
+
+"gcc -o conftest -I/usr/local/include/ruby-1.9.1/x86_64-linux -I/usr/local/include/ruby-1.9.1/ruby/backward -I/usr/local/include/ruby-1.9.1 -I. -I/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/ext -I/usr/include/libxml2 -I/usr/include/libxslt -I/usr/include/libexslt     -O3 -ggdb -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long conftest.c  -L. -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib -Wl,-R/usr/local/lib -L/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -Wl,-R/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib -L.  -rdynamic -Wl,-export-dynamic    -lexslt -lxslt -lxml2 -lz -lm  -Wl,-R -Wl,/usr/local/lib -L/usr/local/lib -lruby-static -l:libxml_ruby.so -lexslt -lxslt -lxml2 -lz -lm  -lpthread -lrt -ldl -lcrypt -lm   -lc"
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_class_new_instance'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eTypeError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ivar_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_snprintf'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_iv_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_class_under'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_mEnumerable'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_aref'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_include_module'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_funcall'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_aset'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_check_string_type'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_attr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_method'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_fix2int'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cvar_get'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `st_foreach'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eRuntimeError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_cat2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_singleton_method'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_mKernel'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_string_value_ptr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_exc_raise'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_string_value_cstr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_block_given_p'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_block_proc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_intern2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cvar_set'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_fatal'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_scan_args'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_cat'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_new3'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_num2int'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_str_new_cstr'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xmalloc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_warning'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_exc_new2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_obj_is_kind_of'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_alias'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_obj_as_string'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eStandardError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module_under'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_module_function'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_warn'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_gc_mark'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_int2big'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_float_new'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_data_object_alloc'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_alloc_func'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ivar_get'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_raise'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_respond_to'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_check_type'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xfree'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `ruby_xmalloc2'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_gc_unregister_address'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_eArgError'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_define_const'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_ary_push'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_cObject'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_yield'
+/usr/local/lib/ruby/gems/1.9.1/gems/libxml-ruby-1.1.4/lib/libxml_ruby.so: undefined reference to `rb_hash_tbl'
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: /*top*/
+4: int main() {return 0;}
+5: int t() { rxml_document_wrap(); return 0; }
+/* end */
+
+--------------------
+

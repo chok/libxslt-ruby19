@@ -122,13 +122,13 @@ EOL
 end
 
 # This doens't actually work - means libxslt can't find libxml...
-# unless (have_library('xml_ruby', 'rxml_document_wrap') or
-#        have_library(':libxml_ruby.so', 'rxml_document_wrap'))
-#  crash(<<EOL)
-#need libxml-ruby
-#        Install libxml-ruby first.
-#EOL
-#end
+ unless (have_library('xml_ruby', 'rxml_document_wrap') or
+        have_library(':libxml_ruby.so', 'rxml_document_wrap'))
+  crash(<<EOL)
+  need libxml-ruby
+        Install libxml-ruby first.
+EOL
+end
 
 create_header()
 create_makefile("libxslt_ruby")
